@@ -1,0 +1,16 @@
+scikit-learn>=1.4
+pandas>=2.2
+numpy
+scipy
+imbalanced-learn
+optuna
+umap-learn
+shap
+torch>=2.2
+tensorflow>=2.16
+pyspark
+mlflow
+matplotlib
+duckdb
+pytest
+jupyter
