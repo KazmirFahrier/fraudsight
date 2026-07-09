@@ -2,7 +2,7 @@
 
 **An end-to-end fraud-detection project engineered to demonstrate every competency of a senior data-science / AI-content-specialist role** — leakage-safe feature engineering, correct cross-validation, class-imbalance handling, Bayesian hyperparameter optimization, deep learning in **both** PyTorch and TensorFlow, statistical + Bayesian inference, light Spark, and MLOps — with an **AI-code-audit** track at its center.
 
-> Companion to the [FraudSight Project Guide](docs/FraudSight_Project_Guide.pdf). Each `src` module and notebook corresponds to a phase in that guide.
+> Designed as a portfolio case study: each `src` module and notebook maps to a concrete project phase, from leakage-safe features through deployment, monitoring, and AI-code audit.
 
 ## Why this repo exists
 
@@ -101,7 +101,7 @@ fraudsight/
 ├── tests/
 │   ├── test_no_leakage.py
 │   └── test_metrics.py
-├── notebooks/            # one per guide phase
+├── notebooks/            # one per project phase
 ├── reports/              # auto-generated evaluation report + audit log
 └── .github/workflows/ci.yml
 ```
