@@ -26,14 +26,16 @@ def add_point_in_time_features(
     """
     df = df.sort_values([id_col, ts_col]).copy()
 
-    def _roll(g: pd.DataFrame) -> pd.DataFrame:
+    # Iterate groups explicitly (avoids the groupby.apply-on-grouping-column
+    # deprecation and preserves all columns, including id_col).
+    parts = []
+    for _, g in df.groupby(id_col, sort=False):
         g = g.copy()
         r = g.rolling(window, on=ts_col, closed="left")
         g["spend_prior"] = r[amount_col].sum()
         g["count_prior"] = r[amount_col].count()
-        return g
-
-    df = df.groupby(id_col, group_keys=False).apply(_roll, include_groups=True)
+        parts.append(g)
+    df = pd.concat(parts) if parts else df
     df[["spend_prior", "count_prior"]] = df[["spend_prior", "count_prior"]].fillna(0)
     return df
 

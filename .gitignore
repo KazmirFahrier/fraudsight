@@ -11,5 +11,13 @@ data/*.zip
 models/*.pkl
 models/*.pt
 models/*.keras
+models/*.joblib
+notebooks/models/
 *.log
 .DS_Store
+
+# mlflow
+mlflow.db
+*.db-journal
+mlartifacts/
+mlruns/

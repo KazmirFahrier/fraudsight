@@ -14,3 +14,7 @@ matplotlib
 duckdb
 pytest
 jupyter
+fastapi
+uvicorn
+pydantic
+joblib
